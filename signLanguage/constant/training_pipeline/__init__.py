@@ -10,4 +10,4 @@ DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 
-DATA_DOWNLOAD_URL: str = "https://github.com/ankitkrissna1234/Datasets_For_Projects/raw/main/Sign_language_data.zip"
+DATA_DOWNLOAD_URL: str = "https://github.com/ankitkrissna1234/Datasets_For_Projects/raw/refs/heads/main/Sign%20Language%20Detection.zip"
