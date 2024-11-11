@@ -22,17 +22,20 @@ class ModelTrainer:
             logging.info("Unzipping data")
             os.system("unzip Sign_Language_Dataset.zip")
             os.system("rm Sign_Language_Dataset.zip")
-            # Load a pretrained model
-            model = YOLO("yolo11n.pt")
+            # # Load a pretrained model
+            # # model = YOLO("yolo11n.pt")
 
-            # Train the model on your custom dataset
-            results = model.train(
-                data="data.yaml",
-                epochs=self.model_trainer_config.no_epochs,
-                imgsz=self.model_trainer_config.image_size,
+            # # Train the model on your custom dataset
+            # #results = model.train(
+            #     #data="data.yaml",
+            #     #epochs=self.model_trainer_config.no_epochs,
+            #     imgsz=self.model_trainer_config.image_size,
+            # )
+            os.system(
+                "yolo detect train data='data.yaml' model='yolo11n.pt' epochs=1 imgsz=640"
             )
 
-            os.system("cp runs/detect/train/weights/best.pt runs/")
+            os.system("cp runs/detect/train/weights/best.pt  runs/")
             os.makedirs(self.model_trainer_config.model_trainer_dir, exist_ok=True)
             os.system(
                 f"cp runs/detect/train/weights/best.pt {self.model_trainer_config.model_trainer_dir}/"

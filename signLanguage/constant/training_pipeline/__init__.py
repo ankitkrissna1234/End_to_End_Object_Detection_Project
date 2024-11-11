@@ -35,3 +35,10 @@ MODEL_TRAINER_PRETRAINED_WEIGHT_NAME: str = "yolo11n.pt"
 MODEL_TRAINER_NO_EPOCHS: int = 50
 
 MODEL_TRAINER_IMAGE_SIZE: int = 640
+
+
+"""
+MODEL PUSHER related constant start with MODEL_PUSHER var name
+"""
+BUCKET_NAME = "sign-lang-7846"
+S3_MODEL_NAME = "best.pt"

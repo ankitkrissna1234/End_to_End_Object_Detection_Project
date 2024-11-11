@@ -163,3 +163,4 @@ artifacts/*
 signEnv/
 signenv/
 CollectdImages/*
+runs/*
